@@ -1,0 +1,6 @@
+# Where things are. Relative paths are relative to the repository root.
+# To use another file, set LIBERO_BLENDER_PATHS=/path/to/paths.yaml.
+libero_datasets: third_party/LIBERO/libero/datasets   # the original LIBERO demo files, one folder per suite
+rendered_datasets: datasets                          # re-rendered files go to <this>/<render config name>/<suite>/
+results: results                                     # eval results and scene dumps
+blender: .cache/blender/blender-4.4.0-linux-x64/blender   # Blender 4.4, from scripts/install_blender.sh

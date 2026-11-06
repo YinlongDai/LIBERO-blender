@@ -1,0 +1,11 @@
+# Ranges for random lighting per episode (libero_blender/lighting.py).
+# Applied on top of a render config's lighting; bump `version` whenever a range changes.
+# Each episode colours the key light, the fill light or both (equally likely) with one random hue.
+name: random_light
+version: 3
+
+saturation: [0.0, 0.6]               # HSV saturation of that colour; hue is uniform over the full circle
+key_light_elevation_deg: [30.0, 90.0]  # angle of the key light above the table, seen from the scene centre; any azimuth
+key_light_distance_m: [1.0, 1.5]     # from the scene centre; the light is aimed at it
+ambient_rotation_deg: [0.0, 360.0]   # turns the HDRI fill light, and with it its bright window, around the vertical
+brightness: [0.6, 2.0]               # multiplies key light power and fill strength together

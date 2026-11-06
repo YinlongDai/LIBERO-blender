@@ -1,0 +1,25 @@
+# Cycles render config. Bump `version` whenever any value changes; every output records name + version.
+# 64 samples flickered on glossy moving parts, and 256 cost about the same per frame because per-render
+# setup dominates.
+name: cycles
+version: 1
+engine: cycles
+
+cycles:
+  samples: 256
+  adaptive_sampling: false
+  seed: 0
+  denoiser: OPTIX
+  clamp_indirect: 1.0  # tames bright glossy paths that the per-frame denoiser turns into blotches
+  blur_glossy: 1.0
+  max_bounces: 12
+  persistent_data: true  # keep the scene on the GPU between renders; only transforms change
+
+lighting:
+  hdri: interior.exr
+  hdri_strength: 0.4
+  key_light_power_w: 15.0
+  key_light_size_m: 2.0
+  key_light_height_above_scene_m: 1.0
+  key_light_shadow_jitter: true
+  key_light_shadow_overblur_percent: 40.0

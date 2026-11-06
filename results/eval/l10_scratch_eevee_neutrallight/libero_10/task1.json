@@ -1,0 +1,484 @@
+{
+  "suite": "libero_10",
+  "task_id": 1,
+  "task": "LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket",
+  "language": "put both the cream cheese box and the butter in the basket",
+  "render_config": {
+    "name": "eevee",
+    "version": 1,
+    "overrides": {}
+  },
+  "policy": "l100_mode_scratch_eevee_698451, ckpt 60000",
+  "successes": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "lengths": [
+    271,
+    272,
+    270,
+    281,
+    328,
+    275,
+    260,
+    270,
+    291,
+    282,
+    327,
+    280,
+    270,
+    263,
+    281,
+    291,
+    269,
+    291,
+    278,
+    281
+  ],
+  "success_rate": 1.0,
+  "wall_seconds": 391.0,
+  "lighting": {
+    "name": "neutral_light",
+    "version": 1,
+    "saturation": [
+      0.0,
+      0.0
+    ],
+    "key_light_elevation_deg": [
+      90.0,
+      90.0
+    ],
+    "key_light_distance_m": [
+      1.0,
+      1.0
+    ],
+    "ambient_rotation_deg": [
+      0.0,
+      0.0
+    ],
+    "brightness": [
+      1.0,
+      1.0
+    ]
+  },
+  "trial_lightings": [
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "both",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "both",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.0,
+        -0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.0,
+        -0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "both",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "both",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "both",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.0,
+        -0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.0,
+        -0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.0,
+        -0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    },
+    {
+      "coloured": "both",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.0,
+        -0.0,
+        1.0
+      ],
+      "ambient_rotation_deg": 0.0,
+      "brightness": 1.0
+    }
+  ]
+}

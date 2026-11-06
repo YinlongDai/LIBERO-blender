@@ -1,0 +1,484 @@
+{
+  "suite": "libero_10",
+  "task_id": 0,
+  "task": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+  "language": "put both the alphabet soup and the tomato sauce in the basket",
+  "render_config": {
+    "name": "cycles",
+    "version": 1,
+    "overrides": {}
+  },
+  "policy": "l100_mode_scratch_cycles_pi0aug_light_8285898, ckpt 60000",
+  "successes": [
+    false,
+    false,
+    true,
+    false,
+    true,
+    false,
+    true,
+    false,
+    true,
+    true,
+    true,
+    false,
+    true,
+    true,
+    false,
+    false,
+    false,
+    true,
+    true,
+    true
+  ],
+  "lengths": [
+    520,
+    520,
+    291,
+    520,
+    319,
+    520,
+    300,
+    520,
+    277,
+    288,
+    294,
+    520,
+    284,
+    280,
+    520,
+    520,
+    520,
+    420,
+    405,
+    293
+  ],
+  "success_rate": 0.55,
+  "wall_seconds": 805.2,
+  "lighting": {
+    "name": "random_light",
+    "version": 3,
+    "saturation": [
+      0.0,
+      0.6
+    ],
+    "key_light_elevation_deg": [
+      30.0,
+      90.0
+    ],
+    "key_light_distance_m": [
+      1.0,
+      1.5
+    ],
+    "ambient_rotation_deg": [
+      0.0,
+      360.0
+    ],
+    "brightness": [
+      0.6,
+      2.0
+    ]
+  },
+  "trial_lightings": [
+    {
+      "coloured": "both",
+      "key_light_color": [
+        0.9275,
+        1.0093,
+        1.1219
+      ],
+      "ambient_color": [
+        0.9275,
+        1.0093,
+        1.1219
+      ],
+      "key_light_offset_m": [
+        0.0345,
+        0.0095,
+        1.2977
+      ],
+      "ambient_rotation_deg": 284.49,
+      "brightness": 1.8745
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        1.2332,
+        0.9228,
+        1.0784
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.2732,
+        -0.3812,
+        1.1221
+      ],
+      "ambient_rotation_deg": 26.96,
+      "brightness": 1.5533
+    },
+    {
+      "coloured": "both",
+      "key_light_color": [
+        1.326,
+        0.8337,
+        1.6873
+      ],
+      "ambient_color": [
+        1.326,
+        0.8337,
+        1.6873
+      ],
+      "key_light_offset_m": [
+        -0.2917,
+        0.3369,
+        0.9793
+      ],
+      "ambient_rotation_deg": 143.68,
+      "brightness": 1.4492
+    },
+    {
+      "coloured": "both",
+      "key_light_color": [
+        1.0708,
+        0.9828,
+        0.9624
+      ],
+      "ambient_color": [
+        1.0708,
+        0.9828,
+        0.9624
+      ],
+      "key_light_offset_m": [
+        -0.7886,
+        0.1021,
+        0.6084
+      ],
+      "ambient_rotation_deg": 197.29,
+      "brightness": 1.3771
+    },
+    {
+      "coloured": "both",
+      "key_light_color": [
+        1.7629,
+        0.7736,
+        0.9965
+      ],
+      "ambient_color": [
+        1.7629,
+        0.7736,
+        0.9965
+      ],
+      "key_light_offset_m": [
+        0.0203,
+        0.8583,
+        0.7004
+      ],
+      "ambient_rotation_deg": 75.39,
+      "brightness": 1.5621
+    },
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.0733,
+        0.9591,
+        1.1887
+      ],
+      "key_light_offset_m": [
+        0.3355,
+        -0.5217,
+        1.136
+      ],
+      "ambient_rotation_deg": 65.97,
+      "brightness": 1.5993
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        1.0489,
+        0.9783,
+        1.0706
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.1204,
+        -1.1286,
+        0.8472
+      ],
+      "ambient_rotation_deg": 6.42,
+      "brightness": 0.6485
+    },
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        0.8697,
+        1.0608,
+        0.7812
+      ],
+      "key_light_offset_m": [
+        -0.1922,
+        0.0255,
+        1.0589
+      ],
+      "ambient_rotation_deg": 57.68,
+      "brightness": 0.8092
+    },
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.2378,
+        0.901,
+        1.2804
+      ],
+      "key_light_offset_m": [
+        0.1861,
+        1.0078,
+        0.9482
+      ],
+      "ambient_rotation_deg": 293.72,
+      "brightness": 1.5907
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        1.4589,
+        0.8739,
+        0.8978
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.6092,
+        0.2156,
+        1.2805
+      ],
+      "ambient_rotation_deg": 102.83,
+      "brightness": 1.1686
+    },
+    {
+      "coloured": "both",
+      "key_light_color": [
+        0.8024,
+        1.059,
+        0.9978
+      ],
+      "ambient_color": [
+        0.8024,
+        1.059,
+        0.9978
+      ],
+      "key_light_offset_m": [
+        -0.4995,
+        0.9476,
+        0.6253
+      ],
+      "ambient_rotation_deg": 69.03,
+      "brightness": 1.5489
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        0.9944,
+        1.0554,
+        0.4676
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.7378,
+        0.498,
+        0.9451
+      ],
+      "ambient_rotation_deg": 196.85,
+      "brightness": 1.0653
+    },
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        0.9495,
+        1.0427,
+        0.7261
+      ],
+      "key_light_offset_m": [
+        0.4016,
+        0.1395,
+        0.952
+      ],
+      "ambient_rotation_deg": 14.1,
+      "brightness": 1.6613
+    },
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        1.6155,
+        0.8338,
+        0.8337
+      ],
+      "key_light_offset_m": [
+        -0.6037,
+        -0.6765,
+        0.8076
+      ],
+      "ambient_rotation_deg": 82.65,
+      "brightness": 1.4753
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        1.0076,
+        0.996,
+        1.0167
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.1123,
+        0.6088,
+        0.8807
+      ],
+      "ambient_rotation_deg": 300.65,
+      "brightness": 1.9838
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        0.6269,
+        1.0964,
+        1.1442
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.4376,
+        1.1968,
+        0.7738
+      ],
+      "ambient_rotation_deg": 265.15,
+      "brightness": 1.8721
+    },
+    {
+      "coloured": "fill",
+      "key_light_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ambient_color": [
+        0.7322,
+        1.0928,
+        0.869
+      ],
+      "key_light_offset_m": [
+        -0.1851,
+        -0.9618,
+        0.7131
+      ],
+      "ambient_rotation_deg": 74.05,
+      "brightness": 1.4479
+    },
+    {
+      "coloured": "both",
+      "key_light_color": [
+        0.4794,
+        1.1719,
+        0.8303
+      ],
+      "ambient_color": [
+        0.4794,
+        1.1719,
+        0.8303
+      ],
+      "key_light_offset_m": [
+        0.0546,
+        0.7466,
+        0.9468
+      ],
+      "ambient_rotation_deg": 126.56,
+      "brightness": 1.3262
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        0.835,
+        1.0947,
+        0.5483
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        0.1372,
+        0.0205,
+        1.1657
+      ],
+      "ambient_rotation_deg": 119.16,
+      "brightness": 1.8655
+    },
+    {
+      "coloured": "key",
+      "key_light_color": [
+        1.2596,
+        0.938,
+        0.8495
+      ],
+      "ambient_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "key_light_offset_m": [
+        -0.6895,
+        0.2512,
+        0.8865
+      ],
+      "ambient_rotation_deg": 297.78,
+      "brightness": 0.9045
+    }
+  ]
+}

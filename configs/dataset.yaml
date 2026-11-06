@@ -1,0 +1,6 @@
+# Checks run while re-rendering a demo file (scripts/render_dataset.py).
+orientation_check_frames: 3      # frames of demo_0 compared with MuJoCo re-renders of the stored states
+max_orientation_diff: 20.0       # mean abs difference (0-255) allowed; close-up wrist views of striped cabinets reach ~14
+alignment_demos: 2               # random demos per file for the geom-id check against MuJoCo segmentation
+alignment_frames_per_demo: 3
+seed: 0

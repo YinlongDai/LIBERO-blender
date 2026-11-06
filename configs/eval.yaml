@@ -1,0 +1,14 @@
+# Closed-loop eval protocol, following semantic_diffusion's LIBERO eval so its MoDE numbers are the reference.
+suite: libero_10
+trials_per_task: 20      # init states 0..19
+seed: 100
+image_size: 128
+settle_steps: 10         # steps of settle_action before the policy starts
+settle_action: [0, 0, 0, 0, 0, 0, -1]
+replan_steps: 10         # actions executed from each predicted chunk
+max_steps:
+  libero_spatial: 220
+  libero_object: 280
+  libero_goal: 300
+  libero_10: 520
+  libero_90: 400

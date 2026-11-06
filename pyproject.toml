@@ -1,0 +1,58 @@
+[project]
+name = "libero-blender"
+version = "0.1.0"
+description = "LIBERO with MuJoCo physics and Blender rendering"
+readme = "README.md"
+requires-python = "==3.8.*"
+# Pins follow openpi/examples/libero/requirements.txt so results stay comparable with published
+# pi0/pi0.5 LIBERO numbers. torch is the CPU build: LIBERO only needs it to load init-state files.
+dependencies = [
+    "libero",
+    "robosuite==1.4.1",
+    "mujoco==3.2.3",
+    "numpy==1.22.4",
+    "numba==0.53.1",
+    "llvmlite==0.36.0",
+    "scipy==1.10.1",
+    "opencv-python==4.6.0.66",
+    "pillow==10.4.0",
+    "pyopengl==3.1.7",
+    "glfw==1.12.0",
+    "matplotlib==3.5.3",
+    "imageio==2.35.1",
+    "imageio-ffmpeg==0.5.1",
+    "pyyaml==6.0.2",
+    "termcolor==2.4.0",
+    "tqdm==4.67.1",
+    "torch==1.11.0",
+    # LIBERO's own runtime deps (third_party/LIBERO/requirements.txt)
+    "bddl==1.0.1",
+    "easydict==1.9",
+    "future==0.18.2",
+    "cloudpickle==2.1.0",
+    "gym==0.25.2",
+    # this project
+    "h5py==3.11.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["libero_blender"]
+
+[tool.uv]
+environments = ["sys_platform == 'linux'"]
+# LIBERO's top-level libero/ has no __init__.py, so setuptools' default (strict) editable install
+# finds no packages. Compat mode puts the checkout on sys.path, like upstream's `pip install -e .`.
+config-settings = { editable_mode = "compat" }
+
+[tool.uv.sources]
+libero = { path = "third_party/LIBERO", editable = true }
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

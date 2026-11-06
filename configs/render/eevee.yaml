@@ -1,0 +1,18 @@
+# EEVEE render config. Bump `version` whenever any value changes; every output records name + version.
+# Picked by comparing replay videos at several sample counts and shadow settings.
+name: eevee
+version: 1
+engine: eevee
+
+eevee:
+  samples: 64          # with the key light's shadow jitter + overblur; fewer left grain and stepped edges
+  raytracing: true
+
+lighting:
+  hdri: interior.exr   # ships with Blender (datafiles/studiolights/world), nothing to download
+  hdri_strength: 0.4
+  key_light_power_w: 15.0   # ~2 W/m^2 on the table, so a white diffuse surface sits near 0.5
+  key_light_size_m: 2.0
+  key_light_height_above_scene_m: 1.0
+  key_light_shadow_jitter: true       # EEVEE only; Cycles ignores it
+  key_light_shadow_overblur_percent: 40.0
