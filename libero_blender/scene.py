@@ -237,6 +237,10 @@ def make_env(suite_name, task_id, image_size, seed=0):
     return env, task, suite.get_task_init_states(task_id)
 
 
+def num_tasks(suite_name):
+    return benchmark.get_benchmark_dict()[suite_name]().n_tasks
+
+
 def find_task_id(suite_name, demo_file):
     suite = benchmark.get_benchmark_dict()[suite_name]()
     task_name = Path(demo_file).name[:-len("_demo.hdf5")]

@@ -3,7 +3,6 @@
 #SBATCH --nodes=1 --ntasks-per-node=1 --cpus-per-task=16
 #SBATCH --gres=gpu:1
 #SBATCH --time=0-08:00:00
-#SBATCH --output=logs/%x_%A_%a.out
 
 # Re-render LIBERO demo files with Blender, one file per array task. Task i takes the i-th file of
 # <libero_datasets>/libero_*/*.hdf5: libero_10 is 0-9, libero_90 10-99, then goal, object and spatial.

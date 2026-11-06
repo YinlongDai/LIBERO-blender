@@ -37,10 +37,12 @@ class BlenderEnv:
         self.rng = np.random.default_rng(seed)
         self.lightings = []  # one per reset, when lighting is random
         self.temporary_scene = None if scene_dir else tempfile.TemporaryDirectory(prefix="libero_blender_scene_")
-        scene_dir = scene_dir or self.temporary_scene.name
-        write_scene(env, scene_dir, {})
+        self.scene_dir = scene_dir or self.temporary_scene.name
+        write_scene(env, self.scene_dir, {})
+        self.render_config = render_config
         self.renderer = Renderer(render_config)
-        self.renderer.load(scene_dir)
+        self.renderer.load(self.scene_dir)
+        self.video_renderer = None  # started by the first render_camera
 
     def __getattr__(self, name):
         # Only called for attributes the wrapper does not have, e.g. check_success, sim, seed.
@@ -51,10 +53,25 @@ class BlenderEnv:
             rng = np.random.default_rng(lighting_seed) if lighting_seed is not None else self.rng
             self.lightings.append(sample_lighting(rng, self.lighting))
             self.renderer.set_lighting(self.lightings[-1])
+            if self.video_renderer:
+                self.video_renderer.set_lighting(self.lightings[-1])
         return self.observe(self.env.reset(), render_now)
 
     def set_init_state(self, init_state, render_now=True):
         return self.observe(self.env.set_init_state(init_state), render_now)
+
+    def render_camera(self, camera, size):
+        """One camera at any size, upright, e.g. for videos.
+
+        A second Blender process renders these: EEVEE keeps some state between renders, so extra
+        renders in the first one would change the observations slightly.
+        """
+        if self.video_renderer is None:
+            self.video_renderer = Renderer(self.render_config)
+            self.video_renderer.load(self.scene_dir)
+            if self.lightings:
+                self.video_renderer.set_lighting(self.lightings[-1])
+        return self.video_renderer.render(poses(self.env), [camera], size)[camera]
 
     def step(self, action, render_now=True):
         obs, reward, done, info = self.env.step(action)
@@ -72,6 +89,8 @@ class BlenderEnv:
 
     def close(self):
         self.renderer.close()
+        if self.video_renderer:
+            self.video_renderer.close()
         self.env.close()
         if self.temporary_scene:
             self.temporary_scene.cleanup()

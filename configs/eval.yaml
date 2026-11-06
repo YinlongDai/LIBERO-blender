@@ -1,6 +1,9 @@
 # Closed-loop eval protocol, following semantic_diffusion's LIBERO eval so its MoDE numbers are the reference.
 suite: libero_10
-trials_per_task: 20      # init states 0..19
+tasks: all               # or a list of task ids, e.g. [0, 3, 7]; --task-id overrides it
+trials_per_task: 20      # init states 0..19 (LIBERO has 50 per task)
+save_videos: false       # one agentview MP4 per trial; slower, as every step is rendered for it
+video_size: 256          # video resolution in pixels, independent of what the policy sees
 seed: 100
 image_size: 128
 settle_steps: 10         # steps of settle_action before the policy starts

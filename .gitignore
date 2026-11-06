@@ -3,8 +3,8 @@
 __pycache__/
 *.egg-info/
 datasets/
-logs/*
-!logs/.gitkeep
+slurm-*.out
+policy-*.log
 # Results stay local, except the eval results REPORT.md cites.
 results/*
 !results/eval/

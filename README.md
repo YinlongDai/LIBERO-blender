@@ -22,6 +22,8 @@ Blender. This repo has:
 | Trained on EEVEE, with lighting augmentation | 0.925 | 0.400 |
 | Trained on Cycles, with lighting augmentation | 0.900 | 0.650 |
 
+The policy is MoDE ([Reuss et al., 2025](https://arxiv.org/abs/2412.12953)), in my own
+implementation rather than the [authors' code](https://github.com/intuitive-robots/mode_diffusion_policy).
 Details in [REPORT.md](REPORT.md).
 
 ![Random lighting](docs/images/lighting_random_eevee.png)
@@ -75,7 +77,7 @@ keep robosuite's raw orientation, so existing preprocessing applies unchanged.
 | `configs/paths.yaml` | dataset, output and Blender paths |
 | `configs/render/eevee.yaml`, `cycles.yaml` | renderer, samples, fixed lighting |
 | `configs/lighting/random.yaml` | random lighting ranges: light colour, key light position, fill rotation, brightness |
-| `configs/eval.yaml` | eval protocol: suite, trials, seed, replanning |
+| `configs/eval.yaml` | eval protocol: suite, tasks, trials, seed, replanning, videos |
 | `configs/dataset.yaml` | checks run during dataset generation |
 
 ## Dataset generation
@@ -93,15 +95,20 @@ Re-rendering is resumable. `slurm/render_dataset.sbatch` runs all 130 files as a
 ## Evaluation
 
 ```bash
-python scripts/evaluate.py --render configs/render/eevee.yaml --task-id 0 --policy-port 6000 --name my_policy
+python scripts/evaluate.py --render configs/render/eevee.yaml --policy-port 6000 --name my_policy
 python scripts/evaluate.py --render configs/render/eevee.yaml --lighting configs/lighting/random.yaml ...
-python scripts/evaluate.py --render mujoco ...
+python scripts/evaluate.py --render mujoco --task-id 3 ...
 python scripts/summarize_eval.py results/eval/my_policy --out results/eval/summary.md
 ```
 
+`configs/eval.yaml` sets the suite, which tasks (`tasks: all` or a list; `--task-id` runs just one),
+the number of trials per task, and `save_videos`, which writes an agentview MP4 of every trial at
+`video_size` pixels (at most 480 with `--render mujoco`). Videos render every step, so evals with them
+are slower.
+
 The policy runs in its own process and Python environment and answers `act` requests. The
 observation it receives and the actions it returns are described in `scripts/evaluate.py`;
-`scripts/policies/mode_server.py` is an example for semantic_diffusion MoDE checkpoints. With random
+`scripts/policies/mode_server.py` is an example for checkpoints of my MoDE implementation. With random
 lighting, a trial's lighting depends only on (seed, task, trial), so all policies see the same
 lightings. `slurm/evaluate.sbatch` runs one task per array task.
 
