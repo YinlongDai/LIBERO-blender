@@ -1,5 +1,7 @@
 # LIBERO-Blender
 
+https://github.com/user-attachments/assets/cf98610e-af7c-4abb-90eb-ac3d456816ab
+
 [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO) with Blender rendering. Physics, init states
 and success checks are LIBERO's own, bit for bit; only the camera images (agentview and wrist) come from
 Blender. This repo has:
