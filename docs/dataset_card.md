@@ -1,6 +1,7 @@
 ---
 license: cc-by-4.0
 pretty_name: LIBERO-Blender
+viewer: false   # HDF5 files; the viewer would only find the JSON manifests
 task_categories:
   - robotics
 tags:
@@ -27,6 +28,11 @@ the two camera images, `obs/agentview_rgb` and `obs/eye_in_hand_rgb`, are replac
 of the stored states. They have the same 128 x 128 shape, dtype, orientation, chunking and compression
 as the originals, so any LIBERO data loader reads these files as they are.
 
+![The middle frame of demo_0 in one task per suite: LIBERO's original image, EEVEE and Cycles](images/comparison_agentview.jpg)
+
+The same frames from the wrist camera: [images/comparison_wrist.jpg](images/comparison_wrist.jpg). Shown
+upscaled from the stored 128 x 128.
+
 Code, render settings and policy results: https://github.com/YinlongDai/LIBERO-blender
 
 ## Layout
@@ -39,6 +45,7 @@ eevee/
   manifest.json                         all 130 per-file manifests, without the alignment samples
   summary.md                            per-suite checks, frames and render time
 cycles/                                 the same
+images/                                 the comparison images above
 ```
 
 Each suite folder is about 6 GB (spatial, object, goal), 13 GB (libero_10) or 63 GB (libero_90).

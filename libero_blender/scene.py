@@ -253,6 +253,7 @@ def find_task_id(suite_name, demo_file):
 def set_sim_state(env, state):
     env.sim.set_state_from_flattened(state)
     env.sim.forward()
-    # In a live episode every step runs LIBERO's success check, which also updates visualization
-    # sites (the stove's red burner disc). Do the same here so replayed states show the same sites.
+    # As LIBERO's own regenerate_obs_from_state: the success check updates object states such as
+    # "stove on", and _post_process shows or hides their visualization sites (the stove's red burner disc).
     env.check_success()
+    env._post_process()
