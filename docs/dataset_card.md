@@ -93,7 +93,14 @@ MoDE policies trained from scratch on LIBERO-90 + LIBERO-10 of each version, eva
 LIBERO-10 with images from the same renderer (200 episodes each): 0.915 on EEVEE and 0.810 on Cycles.
 For comparison, the same recipe trained on the original MuJoCo images scores 0.960 on MuJoCo images
 and 0.000 on Blender images. More results, including a random-lighting eval, are in the code
-repository's REPORT.md.
+repository's REPORT.md. These policies were trained before the stove fix below.
+
+## Changes
+
+- **2026-11-09:** the 9 tasks in which a stove is on (2 in libero_10, 6 in libero_90, 1 in libero_goal)
+  were re-rendered in both versions. LIBERO marks a stove that is on with a red disc on the burner, and
+  the first release never showed it. In the new files only the frames with the burner on changed.
+  The earlier files are in this repository's history.
 
 ## License and citation
 
