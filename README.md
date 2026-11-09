@@ -14,7 +14,10 @@ Blender. This repo has:
 - **Closed-loop evaluation** with MuJoCo or Blender images, fixed or random lighting, for any policy
   that runs as a small server.
 
-| MoDE policy, LIBERO-10 | Fixed lighting | Random lighting |
+Success rates on LIBERO-10, 200 episodes each (10 tasks × 20 trials). Unless noted, a policy is
+evaluated with images from the renderer it was trained on.
+
+| MoDE policy | Success rate, fixed lighting | Success rate, random lighting |
 |---|---|---|
 | Trained on MuJoCo images, eval on MuJoCo | 0.960 | – |
 | Trained on MuJoCo images, eval on EEVEE / Cycles | 0.000 / 0.000 | – |
